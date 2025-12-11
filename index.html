@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | KK14</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#3b82f6',
+              secondary: '#1e293b',
+              accent: '#f59e0b',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Mobile Menu Toggle Logic */
+      #mobile-menu-toggle:checked ~ label .menu-icon {
+        display: none;
+      }
+      #mobile-menu-toggle:checked ~ label .close-icon {
+        display: block;
+      }
+      .close-icon {
+        display: none;
+      }
+    </style>
+  <script type="importmap">
+<!-- {
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.560.0"
+  }
+} -->
+</script>
+</head>
+  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-primary selection:text-white">
+    
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b border-slate-200 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0 flex items-center gap-2">
+            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+              <!-- Code2 Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            </div>
+            <span class="font-bold text-xl tracking-tight text-slate-900">KK_DEV</span>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-slate-600 hover:text-primary transition-colors font-medium text-sm">Home</a>
+            <a href="#about" class="text-slate-600 hover:text-primary transition-colors font-medium text-sm">About</a>
+            <a href="#projects" class="text-slate-600 hover:text-primary transition-colors font-medium text-sm">Projects</a>
+            <a href="#contact" class="text-slate-600 hover:text-primary transition-colors font-medium text-sm">Contact</a>
+          </div>
+
+          <!-- Mobile Menu Button & Checkbox Hack -->
+          <div class="md:hidden flex items-center relative">
+            <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+            <label for="mobile-menu-toggle" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 cursor-pointer">
+              <!-- Menu Icon -->
+              <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              <!-- X Icon -->
+              <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </label>
+            
+            <!-- Mobile Menu Dropdown (Visible when checked) -->
+            <div class="hidden peer-checked:block absolute top-12 right-0 left-auto w-screen -mr-4 bg-white border-t border-slate-100 shadow-lg">
+               <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      
+      <!-- Hero Section -->
+      <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32 px-4 bg-gradient-to-br from-slate-50 to-slate-100 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
+              Hi, I'm <span class="text-primary">Kyi</span>.<br />
+              I Build Digital Experiences.
+            </h1>
+            <p class="mt-4 text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
+              A passionate <span class="font-semibold text-slate-800">Junior Frontend Engineer</span> specializing in building accessible, pixel-perfect, and performant web applications using modern technologies.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="#projects" class="px-8 py-3.5 rounded-full bg-primary text-white font-semibold shadow-lg shadow-primary/30 hover:bg-blue-600 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                View My Work
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <a href="#contact" class="px-8 py-3.5 rounded-full bg-white text-slate-700 font-semibold border border-slate-200 shadow-sm hover:border-slate-300 hover:bg-slate-50 transition-all">
+                Contact Me
+              </a>
+            </div>
+
+            <div class="mt-12 flex justify-center space-x-6 text-slate-400">
+              <a href="#" class="hover:text-slate-800 transition-colors transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </a>
+              <a href="#" class="hover:text-blue-700 transition-colors transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="hover:text-blue-400 transition-colors transform hover:scale-110">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">About Me</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+              I'm a developer who loves transforming ideas into reality through code. With over 5 years of experience, I've worked on everything from small business sites to large-scale web applications.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div class="relative">
+               <div class="absolute inset-0 bg-primary/10 rounded-2xl transform rotate-3 scale-105 z-0"></div>
+               <img src="uni.jpeg" alt="Workspace" class="relative rounded-2xl shadow-xl z-10 w-full object-cover h-80 lg:h-96" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-4">My Journey</h3>
+              <p class="text-slate-600 mb-6 leading-relaxed">
+                I started my coding journey in uni and quickly fell in love with frontend development. The ability to create something that people interact with daily is incredibly rewarding. I thrive in collaborative environments and am always eager to learn new technologies.
+              </p>
+              <p class="text-slate-600 mb-8 leading-relaxed">
+                Currently, I'm focused on the React ecosystem, exploring server-side rendering patterns and advanced state management.
+              </p>
+              
+              <div class="mb-6">
+                <h4 class="font-semibold text-slate-900 mb-4 uppercase tracking-wider text-sm">Tech Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">React & React Native</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">TypeScript</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Tailwind CSS</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Node.js</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Next.js</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">GraphQL</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">UI/UX Design</span>
+                  <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium border border-slate-200">Performance Optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mb-4 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+              </div>
+              <h4 class="font-semibold text-lg text-slate-900 mb-2">Clean Code</h4>
+              <p class="text-slate-600 text-sm">I write maintainable, scalable, and self-documenting code following best practices.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mb-4 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+              </div>
+              <h4 class="font-semibold text-lg text-slate-900 mb-2">Modern Design</h4>
+              <p class="text-slate-600 text-sm">I implement aesthetically pleasing interfaces with a focus on user experience.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mb-4 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h4 class="font-semibold text-lg text-slate-900 mb-2">Fast Performance</h4>
+              <p class="text-slate-600 text-sm">Optimizing load times and interaction speeds is a top priority in my work.</p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+              <div class="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mb-4 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <h4 class="font-semibold text-lg text-slate-900 mb-2">Responsive</h4>
+              <p class="text-slate-600 text-sm">My layouts work seamlessly on all devices, from mobile phones to desktops.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Featured Projects</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+            <p class="mt-4 text-lg text-slate-600">
+              A selection of my recent work and personal projects.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 flex flex-col h-full group">
+              <div class="relative overflow-hidden h-48">
+                <img src="https://picsum.photos/600/350?random=1" alt="E-Commerce Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 gap-4">
+                    <a href="#" class="p-2 bg-white rounded-full text-slate-900 hover:text-primary transition-colors" title="View Demo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                    </a>
+                    <a href="#" class="p-2 bg-white rounded-full text-slate-900 hover:text-primary transition-colors" title="View Code">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">E-Commerce Dashboard</h3>
+                <p class="text-slate-600 mb-4 text-sm leading-relaxed flex-grow">
+                  A comprehensive dashboard for managing online store inventory, sales analytics, and customer data using Recharts for visualization.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-auto">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">React</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">TypeScript</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Tailwind</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Recharts</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 flex flex-col h-full group">
+              <div class="relative overflow-hidden h-48">
+                <img src="https://picsum.photos/600/350?random=2" alt="Task Management App" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 gap-4">
+                    <a href="#" class="p-2 bg-white rounded-full text-slate-900 hover:text-primary transition-colors" title="View Demo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                    </a>
+                    <a href="#" class="p-2 bg-white rounded-full text-slate-900 hover:text-primary transition-colors" title="View Code">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">Task Management App</h3>
+                <p class="text-slate-600 mb-4 text-sm leading-relaxed flex-grow">
+                  A Kanban-style task management application with drag-and-drop functionality, persistent local storage, and team collaboration features.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-auto">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">React</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Redux Toolkit</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">DnD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 flex flex-col h-full group">
+              <div class="relative overflow-hidden h-48">
+                <img src="https://picsum.photos/600/350?random=3" alt="Weather Forecast Service" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/40 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 gap-4">
+                    <a href="#" class="p-2 bg-white rounded-full text-slate-900 hover:text-primary transition-colors" title="View Demo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                    </a>
+                    <a href="#" class="p-2 bg-white rounded-full text-slate-900 hover:text-primary transition-colors" title="View Code">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                    </a>
+                </div>
+              </div>
+              <div class="p-6 flex-grow flex flex-col">
+                <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">Weather Forecast Service</h3>
+                <p class="text-slate-600 mb-4 text-sm leading-relaxed flex-grow">
+                  A responsive weather application providing real-time forecasts, location detection, and interactive maps using external weather APIs.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-auto">
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">React</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">OpenWeatherMap API</span>
+                  <span class="text-xs font-medium px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md">Axios</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-16 text-center">
+              <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-blue-700 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2.5a2 2 0 0 1 1.6.8l1.8 2.4h6.1a2 2 0 0 1 2 2z"/></svg>
+                  View All Projects Archive
+              </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+            <div>
+              <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-6">Let's Work Together</h2>
+              <p class="text-lg text-slate-600 mb-8">
+                I'm currently available for freelance projects and full-time roles. 
+                If you have a project in mind or just want to say hi, feel free to reach out!
+              </p>
+
+              <div class="space-y-6">
+                <!-- Email -->
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-slate-900">Email</h3>
+                    <p class="mt-1 text-slate-600">hello@kkdev.com</p>
+                  </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-slate-900">Phone</h3>
+                    <p class="mt-1 text-slate-600">+95 123-4567</p>
+                  </div>
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-start">
+                  <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 text-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-medium text-slate-900">Location</h3>
+                    <p class="mt-1 text-slate-600">Pyay, Bgo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 shadow-sm">
+              <form class="space-y-6" onsubmit="event.preventDefault()">
+                <div>
+                  <label htmlFor="name" class="block text-sm font-medium text-slate-700 mb-1">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="block w-full rounded-md border-slate-300 bg-white border px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:outline-none focus:ring-2 focus:ring-opacity-20 shadow-sm transition-all"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" class="block text-sm font-medium text-slate-700 mb-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="block w-full rounded-md border-slate-300 bg-white border px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:outline-none focus:ring-2 focus:ring-opacity-20 shadow-sm transition-all"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" class="block text-sm font-medium text-slate-700 mb-1">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="block w-full rounded-md border-slate-300 bg-white border px-4 py-3 text-slate-900 focus:border-primary focus:ring-primary focus:outline-none focus:ring-2 focus:ring-opacity-20 shadow-sm transition-all resize-none"
+                    placeholder="Tell me about your project..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors gap-2"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <span class="font-bold text-xl tracking-tight">KKDev</span>
+            <p class="text-slate-400 text-sm mt-1">© <script>document.write(new Date().getFullYear())</script> All rights reserved.</p>
+          </div>
+          
+          <div class="flex space-x-6 text-sm text-slate-400">
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+        </div>
+        
+        <div class="mt-8 pt-8 border-t border-slate-800 text-center text-slate-500 text-sm flex items-center justify-center gap-1">
+          Designed and built with 
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500 fill-current"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          by kk.
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
